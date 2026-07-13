@@ -1,0 +1,28 @@
+[
+  {
+    "key": 1,
+    "title": "AI-Powered Evangadi Forum",
+    "imagesrc": "./Project/evangadiforum.jpg",
+    "Description": "Developed a full-stack AI-powered discussion platform where users can register, log in, ask questions, answer community discussions, and receive AI-assisted responses. The application combines traditional forum functionality with AI features to help users get intelligent answers while encouraging community interaction.. ",
+    "source": "#",
+    "URL": "https://evangadiforumem.netlify.app"
+  },
+  {
+    "key": 2,
+    "title": "ChatGPT Clone",
+    "imagesrc": "./Project/chatgpt.jpg",
+    "Description": "A full-stack AI-inspired chat application featuring user authentication, conversation management, responsive design, and a clean modern interface. The project demonstrates frontend-backend integration using React, Node.js, Express.js, and MySQL..  ",
+    "source": "https://github.com/kebaL32/GPT_CLONE.git",
+    "URL": "https://chatgptch.netlify.app"
+  },
+  {
+    "key": 3,
+    "title": "Netflix Clone",
+    "imagesrc": "./Project/netflix.jpg",
+    "Description": "A responsive Netflix-inspired landing page built using React. The project focuses on modern UI design, reusable components, and responsive layouts while providing an engaging user experience.",
+    "source": "https://github.com/kebaL32/movieclone.git",
+    "URL": "https://movieclonetmd.netlify.app"
+
+  }
+
+]
