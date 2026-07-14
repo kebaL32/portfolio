@@ -4,7 +4,7 @@
     "title": "AI-Powered Evangadi Forum",
     "imagesrc": "./Project/evangadiforum.jpg",
     "Description": "Developed a full-stack AI-powered discussion platform where users can register, log in, ask questions, answer community discussions, and receive AI-assisted responses. The application combines traditional forum functionality with AI features to help users get intelligent answers while encouraging community interaction.. ",
-    "source": "#",
+    "source": "https://github.com/kebaL32/evangadi-forum.git",
     "URL": "https://evangadiforumem.netlify.app"
   },
   {
