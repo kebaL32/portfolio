@@ -12,7 +12,7 @@ const Banner = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const phoneNumber = "251928163283";
   const message = encodeURIComponent(
-    "Hello Kebron! Tell me something about you."
+    "Hello Kebron! Tell me something about you.",
   );
 
   useEffect(() => {
@@ -34,8 +34,11 @@ const Banner = () => {
       setIsDarkMode(document.documentElement.classList.contains("dark"));
     });
 
-    observer.observe(document.documentElement, { attributes: true, attributeFilter: ["class"] });
-    
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
+
     // Initial check
     setIsDarkMode(document.documentElement.classList.contains("dark"));
 
@@ -46,20 +49,20 @@ const Banner = () => {
   }, []);
 
   return (
-    <div
-      className="relative main-container flex flex-col md:flex-row items-center justify-between p-4 md:p-12 overflow-x-hidden transition-all duration-500"
-    >
+    <div className="relative main-container flex flex-col md:flex-row items-center justify-between p-4 md:p-12 overflow-x-hidden transition-all duration-500">
       {/* Background Layer */}
-      <div 
+      <div
         className="absolute inset-0 z-[-1] transition-all duration-500"
         style={{
           backgroundImage: `url(${isDarkMode ? darkBackground : wallpaper})`,
           backgroundSize: "cover",
-          backgroundPosition: "center"
+          backgroundPosition: "center",
         }}
       />
       {/* Dark Mode Overlay for better text contrast */}
-      <div className={`absolute inset-0 z-[-1] transition-opacity duration-500 ${isDarkMode ? "bg-slate-900/60" : "bg-black/20"}`} />
+      <div
+        className={`absolute inset-0 z-[-1] transition-opacity duration-500 ${isDarkMode ? "bg-slate-900/60" : "bg-black/20"}`}
+      />
 
       <div
         className="w-full md:w-1/2 lg:ml-14 flex flex-col items-center md:items-start justify-center md:text-left"
@@ -82,8 +85,14 @@ const Banner = () => {
 
           <div className="flex flex-wrap gap-3 text-sm mt-6">
             {[
-              { icon: "fa-facebook", link: "https://www.facebook.com/profile.php?id=100088821502598" },
-              { icon: "fa-instagram", link: "https://www.instagram.com/kebiluel?utm_source=qr&igsh=MW8wOTRmdDV2cGc1OA==" },
+              {
+                icon: "fa-facebook",
+                link: "https://www.facebook.com/profile.php?id=100088821502598",
+              },
+              {
+                icon: "fa-instagram",
+                link: "https://www.instagram.com/kebiluel?utm_source=qr&igsh=MW8wOTRmdDV2cGc1OA==",
+              },
               { icon: "fa-linkedin", link: "#" },
               { icon: "fa-envelope", link: "mailto:kebronluel78@gmail.com" },
             ].map((social, idx) => (
@@ -94,7 +103,9 @@ const Banner = () => {
                 rel="noopener noreferrer"
                 className="bg-gray-950/50 hover:bg-orange-600 border border-white/20 text-white px-3 py-2 rounded-full transition-all duration-300 hover:scale-110 shadow-lg backdrop-blur-sm"
               >
-                <i className={`${social.icon === 'fa-envelope' ? 'fa-solid' : 'fa-brands'} ${social.icon}`}></i>
+                <i
+                  className={`${social.icon === "fa-envelope" ? "fa-solid" : "fa-brands"} ${social.icon}`}
+                ></i>
               </a>
             ))}
           </div>
@@ -117,7 +128,7 @@ const Banner = () => {
         data-aos-duration="1000"
       >
         <img
-          className="rounded-lg h-80 w-auto my-1 mb-4 shadow-2xl border-4 animate-identifier border-orange-500"
+          className="profile-border-glow rounded-lg h-80 w-auto my-1 mb-4 shadow-2xl border-4 animate-identifier"
           src={BannerImage}
           alt="Kebron Luel Profile Picture"
           fetchPriority="high"
@@ -133,6 +144,34 @@ const Banner = () => {
       >
         <FaWhatsapp className="text-3xl" />
       </a>
+
+      <style>{`
+        .profile-border-glow {
+          animation: borderColorCycle 10s ease-in-out infinite;
+        }
+        @keyframes borderColorCycle {
+          0% {
+            border-color: #f97316; /* orange-500 */
+            box-shadow: 0 0 20px 2px rgba(249, 115, 22, 0.6);
+          }
+          25% {
+            border-color: #a855f7; /* purple-500 */
+            box-shadow: 0 0 20px 2px rgba(168, 85, 247, 0.6);
+          }
+          50% {
+            border-color: #3b82f6; /* blue-500 */
+            box-shadow: 0 0 20px 2px rgba(59, 130, 246, 0.6);
+          }
+          75% {
+            border-color: #ec4899; /* pink-500 */
+            box-shadow: 0 0 20px 2px rgba(236, 72, 153, 0.6);
+          }
+          100% {
+            border-color: #f97316; /* orange-500 */
+            box-shadow: 0 0 20px 2px rgba(249, 115, 22, 0.6);
+          }
+        }
+      `}</style>
     </div>
   );
 };

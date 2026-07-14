@@ -24,13 +24,13 @@ const Footer = () => {
                 <a href="#Banner" className="text-slate-600 dark:text-slate-300 hover:text-orange-500 no-underline transition-colors text-sm font-medium">Home</a>
               </li>
               <li>
-                <a href="#/About" className="text-slate-600 dark:text-slate-300 hover:text-orange-500 no-underline transition-colors text-sm font-medium">About Me</a>
+                <a href="#About" className="text-slate-600 dark:text-slate-300 hover:text-orange-500 no-underline transition-colors text-sm font-medium">About Me</a>
               </li>
               <li>
-                <a href="#/Project" className="text-slate-600 dark:text-slate-300 hover:text-orange-500 no-underline transition-colors text-sm font-medium">Projects</a>
+                <a href="#Project" className="text-slate-600 dark:text-slate-300 hover:text-orange-500 no-underline transition-colors text-sm font-medium">Projects</a>
               </li>
               <li>
-                <a href="#/Skill" className="text-slate-600 dark:text-slate-300 hover:text-orange-500 no-underline transition-colors text-sm font-medium">Skills</a>
+                <a href="#Skill" className="text-slate-600 dark:text-slate-300 hover:text-orange-500 no-underline transition-colors text-sm font-medium">Skills</a>
               </li>
             </ul>
           </div>

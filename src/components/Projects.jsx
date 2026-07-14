@@ -22,17 +22,19 @@ const ProjectCard = ({ data }) => {
       </div>
 
       <div className="p-5 flex flex-col flex-grow bg-slate-50 dark:bg-slate-800/50">
-        <h5 className="text-xl font-bold text-slate-800 dark:text-slate-100 mb-3">{data.title}</h5>
-        
+        <h5 className="text-xl font-bold text-slate-800 dark:text-slate-100 mb-3">
+          {data.title}
+        </h5>
+
         <div className="relative mb-6 flex-grow">
-          <div 
-            className={`text-slate-600 dark:text-slate-300 text-sm transition-all duration-300 overflow-y-auto ${
-              isExpanded ? "max-h-40" : "max-h-20 line-clamp-3"
+          <div
+            className={`text-slate-600 dark:text-slate-300 text-sm transition-all duration-300 ${
+              isExpanded ? "" : "line-clamp-3"
             }`}
           >
             {data.Description}
           </div>
-          <button 
+          <button
             onClick={() => setIsExpanded(!isExpanded)}
             className="text-orange-600 dark:text-orange-400 text-xs font-bold mt-2 hover:text-orange-700 transition-colors focus:outline-none"
           >
@@ -77,7 +79,10 @@ const ProjectCard = ({ data }) => {
 
 const Projects = () => {
   return (
-    <div className="py-24 bg-white dark:bg-slate-900 transition-colors duration-300" id="Project">
+    <div
+      className="py-24 bg-white dark:bg-slate-900 transition-colors duration-300"
+      id="Project"
+    >
       <div className="container mx-auto px-6">
         <div className="text-center mb-16" data-aos="fade-down">
           <h1 className="text-4xl font-bold text-slate-800 dark:text-slate-100 mb-4">
@@ -85,7 +90,7 @@ const Projects = () => {
           </h1>
           <div className="w-20 h-1.5 bg-orange-500 mx-auto rounded-full"></div>
         </div>
-        
+
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           {ProjectData.map((data) => (
             <ProjectCard key={data.key} data={data} />
